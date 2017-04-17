@@ -1,7 +1,7 @@
 ![LaunchPad](https://i.imgur.com/BIMUuQ5.png)
 -----
 # LaunchPad 🚀 :: React + Redux + Semantic-UI Starter Kit
-## Inspired & Forked by the *[react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) crew*! Make sure you check out their AMAZING work!
+### Inspired & (sorta) Forked by the *[react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) crew*! Make sure you check out their AMAZING work!
 
 
 The differences between the original kit and this are that this bolts on Semantic-UI (React-version) for componentization. Some other plans will be made in the future, and perhaps split onto another branch (e.g. Electron app, Chrome Extension, Native, etc)... but for now it's a pure playground mess :). I would've forked to pick up their post beta changes, and may actually manually merge that in the future -- but I figured I won't be able to keep pace with those guys, so will cross that bridge when I get to it!
