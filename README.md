@@ -1,6 +1,6 @@
 ![LaunchPad](https://i.imgur.com/BIMUuQ5.png)
 -----
-#LaunchPad 🚀 :: React + Redux + Semantic-UI Starter Kit
+# LaunchPad 🚀 :: React + Redux + Semantic-UI Starter Kit
 ## Inspired & Forked by the *[react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) crew*! Make sure you check out their AMAZING work!
 
 
