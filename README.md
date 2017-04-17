@@ -1,217 +1,55 @@
-# React Redux Starter Kit
+![LaunchPad](https://i.imgur.com/BIMUuQ5.png)
+-----
+#LaunchPad 🚀 :: React + Redux + Semantic-UI Starter Kit
+## Inspired & Forked by the *[react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) crew*! Make sure you check out their AMAZING work!
 
-[![Join the chat at https://gitter.im/davezuko/react-redux-starter-kit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davezuko/react-redux-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/davezuko/react-redux-starter-kit.svg?branch=master)](https://travis-ci.org/davezuko/react-redux-starter-kit?branch=master)
-[![dependencies](https://david-dm.org/davezuko/react-redux-starter-kit.svg)](https://david-dm.org/davezuko/react-redux-starter-kit)
-[![devDependency Status](https://david-dm.org/davezuko/react-redux-starter-kit/dev-status.svg)](https://david-dm.org/davezuko/react-redux-starter-kit#info=devDependencies)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-This starter kit is designed to get you up and running with a bunch of awesome new front-end technologies, all on top of a configurable, feature-rich webpack build system that's already setup to provide hot reloading, CSS preprocessing with Sass, unit testing, code coverage reports, bundle splitting, and more.
+The differences between the original kit and this are that this bolts on Semantic-UI (React-version) for componentization. Some other plans will be made in the future, and perhaps split onto another branch (e.g. Electron app, Chrome Extension, Native, etc)... but for now it's a pure playground mess :). I would've forked to pick up their post beta changes, and may actually manually merge that in the future -- but I figured I won't be able to keep pace with those guys, so will cross that bridge when I get to it!
 
-The primary goal of this project is to remain as **unopinionated** as possible. Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
 
-Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
+### Why YARCSTL (Yet Another React Component Style & Theme Library?
+Honestly, as working in the front-end for over ten years, you see things come and go -- but the odd thing is the hordes of Material-UI influenced libraries, which are mostly all very well documented -- and have great support from the get go. Bolt on, start importing and exporting, throw in your Redux and you're jamming. 
 
-## Table of Contents
-1. [Features](#features)
-1. [Requirements](#requirements)
-1. [Getting Started](#getting-started)
-1. [Application Structure](#application-structure)
-1. [Development](#development)
-  1. [Developer Tools](#developer-tools)
-  1. [Routing](#routing)
-1. [Testing](#testing)
-1. [Deployment](#deployment)
-1. [Build System](#build-system)
-  1. [Configuration](#configuration)
-  1. [Globals](#globals)
-  1. [Styles](#styles)
-  1. [Server](#server)
-  1. [Production Optimization](#production-optimization)
-1. [Learning Resources](#learning-resources)
-1. [FAQ](#troubleshooting)
-1. [Thank You](#thank-you)
+> As a UX/UI Designer & Engineer, I tend to believe that when everything starts looking, feeling, and acting the same; we become bored, frustrated, and usually annoyed at how one application utilizes Material-UI/React-Toolbox/etc. but delivers the UX in different ways. Many times, designers are following very similar patters when it feels like there's so little contrast in how applications and the interfaces we use become stale.
 
-## Features
-* [react](https://github.com/facebook/react)
-* [redux](https://github.com/rackt/redux)
-* [react-router](https://github.com/rackt/react-router)
-* [webpack](https://github.com/webpack/webpack)
-* [babel](https://github.com/babel/babel)
-* [express](https://github.com/expressjs/express)
-* [karma](https://github.com/karma-runner/karma)
-* [eslint](http://eslint.org)
 
-## Requirements
-* node `^4.5.0`
-* yarn `^0.17.0` or npm `^3.0.0`
+## Why Semantic-UI?
 
-## Getting Started
+<img align="right" src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1461315888semantic.png">
 
-After confirming that your development environment meets the specified [requirements](#requirements), you can create a new project based on `react-redux-starter-kit` by doing the following:
+ Call me selfsh. From my ES5 days, I've always loved Semantic-UI. Partly because of the flexibility and range of options, but how well it was able to engage the user in a variety of shape, color, layout, and identity. Basically, it was a Designer + Developer's playground to craft a user interface. Not to say that Material isn't, and we all know and love how amazingly well detailed Google has been in their pursuit of brand integrity, styleguide, and uniformity when it comes to the Material look. | I just want to be able to utilize a different library that: 
 
-### Install from source
 
-First, clone the project:
+1. I love and know very well
+2. Adapt a fantastic React + Redux boilerplate and fuse it with a phenomeal UI Library
+3. Build my own skills and see how far I can take a project like this. Could this just be another boilerplate? Or could it be a full featured Electron/Chrome Extension/React Native project?
+4. I know I have plans to utilize something similar when I get to the point of wiring everything up appropriately -- as I'm sure many others will as well. 
 
-```bash
-$ git clone https://github.com/davezuko/react-redux-starter-kit.git <my-project-name>
-$ cd <my-project-name>
-```
+**Who knows though, by the time that comes, we may be back into scrolling text and the blink tag :).**
 
-Then install dependencies and check to see it works. It is recommended that you use [Yarn](https://yarnpkg.com/) for deterministic installs, but `npm install` will work just as well.
+## Goals
+#### Not Listed in any particular order:
 
-```bash
-$ yarn install    # Install project dependencies
-$ yarn start      # Compile and launch (same as `npm start`)
-```
-If everything works, you should see the following:
+- Components (stateless)
+- ATOMIC Design approaches
+- Readability
+- Performance
+- Testing
+- Theming
 
-<img src="http://i.imgur.com/Kk2qTHC.png" />
+Hopefully during the process (I'm working on this mostly to bolster my own greater knowledge of React, ES6, and other libraries, so things like the following are definitely on the table:  
 
-While developing, you will probably rely mostly on `npm start`; however, there are additional scripts at your disposal:
 
-|`npm run <script>`|Description|
-|------------------|-----------|
-|`start`|Serves your app at `localhost:3000`. HMR will be enabled in development.|
-|`compile`|Compiles the application to disk (`~/dist` by default).|
-|`dev`|Same as `npm start`, but enables nodemon for the server as well.|
-|`test`|Runs unit tests with Karma and generates a coverage report.|
-|`test:dev`|Runs Karma and watches for changes to re-run tests; does not generate coverage reports.|
-|`deploy`|Runs linter, tests, and then, on success, compiles your application to disk.|
-|`deploy:dev`|Same as `deploy` but overrides `NODE_ENV` to "development".|
-|`deploy:prod`|Same as `deploy` but overrides `NODE_ENV` to "production".|
-|`lint`|Lint all `.js` files.|
-|`lint:fix`|Lint and fix all `.js` files. [Read more on this](http://eslint.org/docs/user-guide/command-line-interface.html#fix).|
+- D3.js
+- Socket.io
+- WebRTC
+- Natve HTML5 API (facades)
 
-## Application Structure
+Likely a lot of the implementations may come from well established npm/git repos, teams, and myself. This is just a hobby, and a deeper dive. Don't expect things to go flying by, but definitely feel free to show some love if you're into this idea :)!
 
-The application structure presented in this boilerplate is **fractal**, where functionality is grouped primarily by feature rather than file type. Please note, however, that this structure is only meant to serve as a guide, it is by no means prescriptive. That said, it aims to represent generally accepted guidelines and patterns for building scalable applications. If you wish to read more about this pattern, please check out this [awesome writeup](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure) by [Justin Greenberg](https://github.com/justingreenberg).
+## About Me:
+> Design-first approacher, creative, believer in code-as-art, an ES5 pro turning ES6 better day by day (thank you late night caffiene beverages and the hordes of people smarter than I am.  
 
-```
-.
-├── bin                      # Build/Start scripts
-├── config                   # Project and build configurations
-├── public                   # Static public assets (not imported anywhere in source code)
-├── server                   # Express application that provides webpack middleware
-│   └── main.js              # Server application entry point
-├── src                      # Application source code
-│   ├── index.html           # Main HTML page container for app
-│   ├── main.js              # Application bootstrap and rendering
-│   ├── components           # Global Reusable Presentational Components
-│   ├── containers           # Global Reusable Container Components
-│   ├── layouts              # Components that dictate major page structure
-│   │   └── CoreLayout.js    # CoreLayout which receives children for each route
-│   │   └── CoreLayout.scss  # Styles related to the CoreLayout
-│   │   └── index.js         # Main file for layout
-│   ├── routes               # Main route definitions and async split points
-│   │   ├── index.js         # Bootstrap main application routes with store
-│   │   ├── Home             # Fractal route
-│   │   │   ├── index.js     # Route definitions and async split points
-│   │   │   ├── assets       # Assets required to render components
-│   │   │   ├── components   # Presentational React Components
-│   │   │   └── routes **    # Fractal sub-routes (** optional)
-│   │   └── Counter          # Fractal route
-│   │       ├── index.js     # Counter route definition
-│   │       ├── container    # Connect components to actions and store
-│   │       ├── modules      # Collections of reducers/constants/actions
-│   │       └── routes **    # Fractal sub-routes (** optional)
-│   ├── store                # Redux-specific pieces
-│   │   ├── createStore.js   # Create and instrument redux store
-│   │   └── reducers.js      # Reducer registry and injection
-│   └── styles               # Application-wide styles (generally settings)
-└── tests                    # Unit tests
-```
+> I've worked in various markets, companies, startups, contracts, sales engineering, and more JavaScript frameworks than I'd like to remember (RIP ExtJS 😂). I'm huge on usability, but I believe in the art of allowing people to intuitively be able to use an application which leaves them feeling satisfied; not frustrating. 
 
-## Development
-
-#### Developer Tools
-
-**We recommend using the [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).**
-Using the chrome extension allows your monitors to run on a separate thread and affords better performance and functionality. It comes with several of the most popular monitors, is easy to configure, filters actions, and doesn’t require installing any packages.
-
-However, adding the DevTools components to your project is simple. First, grab the packages from npm:
-
-```bash
-npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-monitor
-```
-
-Then follow the [manual integration walkthrough](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md).
-
-### Routing
-We use `react-router` [route definitions](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
-
-## Testing
-To add a unit test, simply create a `.spec.js` file anywhere in `~/tests`. Karma will pick up on these files automatically, and Mocha and Chai will be available within your test without the need to import them. Coverage reports will be compiled to `~/coverage` by default. If you wish to change what reporters are used and where reports are compiled, you can do so by modifying `coverage_reporters` in `~/config/project.config.js`.
-
-## Deployment
-Out of the box, this starter kit is deployable by serving the `~/dist` folder generated by `npm run deploy` (make sure to specify your target `NODE_ENV` as well). This project does not concern itself with the details of server-side rendering or API structure, since that demands an opinionated structure that makes it difficult to extend the starter kit. However, if you do need help with more advanced deployment strategies, here are a few tips:
-
-### Static Deployments
-If you are serving the application via a web server such as nginx, make sure to direct incoming routes to the root `~/dist/index.html` file and let react-router take care of the rest. If you are unsure of how to do this, you might find [this documentation](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#configuring-your-server) helpful. The Express server that comes with the starter kit is able to be extended to serve as an API or whatever else you need, but that's entirely up to you.
-
-## Build System
-
-### Configuration
-
-Default project configuration can be found in `~/config/project.config.js`. Here you'll be able to redefine your `src` and `dist` directories, adjust compilation settings, tweak your vendor dependencies, and more. For the most part, you should be able to make changes in here **without ever having to touch the actual webpack build configuration**.
-
-If you need environment-specific overrides (useful for dynamically setting API endpoints, for example), you can edit `~/config/environments.config.js` and define overrides on a per-NODE_ENV basis. There are examples for both `development` and `production`, so use those as guidelines. Here are some common configuration options:
-
-|Key|Description|
-|---|-----------|
-|`dir_src`|application source code base path|
-|`dir_dist`|path to build compiled application to|
-|`server_host`|hostname for the Express server|
-|`server_port`|port for the Express server|
-|`compiler_devtool`|what type of source-maps to generate (set to `false`/`null` to disable)|
-|`compiler_vendor`|packages to separate into to the vendor bundle|
-
-Webpack is configured to make use of [resolve.root](http://webpack.github.io/docs/configuration.html#resolve-root), which lets you import local packages as if you were traversing from the root of your `~/src` directory. Here's an example:
-
-```js
-// current file: ~/src/views/some/nested/View.js
-// What used to be this:
-import SomeComponent from '../../../components/SomeComponent'
-
-// Can now be this:
-import SomeComponent from 'components/SomeComponent' // Hooray!
-```
-
-### Globals
-
-These are global variables available to you anywhere in your source code. If you wish to modify them, they can be found as the `globals` key in `~/config/project.config.js`. When adding new globals, make sure you also add them to `~/.eslintrc`.
-
-|Variable|Description|
-|---|---|
-|`process.env.NODE_ENV`|the active `NODE_ENV` when the build started|
-|`__DEV__`|True when `process.env.NODE_ENV` is `development`|
-|`__PROD__`|True when `process.env.NODE_ENV` is `production`|
-|`__TEST__`|True when `process.env.NODE_ENV` is `test`|
-
-### Styles
-
-Both `.scss` and `.css` file extensions are supported out of the box. After being imported, styles will be processed with [PostCSS](https://github.com/postcss/postcss) for minification and autoprefixing, and will be extracted to a `.css` file during production builds.
-
-### Server
-
-This starter kit comes packaged with an Express server. It's important to note that the sole purpose of this server is to provide `webpack-dev-middleware` and `webpack-hot-middleware` for hot module replacement. Using a custom Express app in place of [webpack-dev-server](https://github.com/webpack/webpack-dev-server) makes it easier to extend the starter kit to include functionality such as API's, universal rendering, and more -- all without bloating the base boilerplate.
-
-### Production Optimization
-
-Babel is configured to use [babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) so transforms aren't inlined. In production, webpack will extract styles to a `.css` file, minify your JavaScript, and perform additional optimizations such as module deduplication.
-
-## FAQ
-
-Having trouble? Check out our [FAQ](https://github.com/davezuko/react-redux-starter-kit/wiki/FAQ:-Frequently-Asked-Questions) or submit an issue. Please be considerate by only posting issues that are directly related to this project; questions about how to implement certain React or Redux features are both best suited for StackOverflow or their respective repositories.
-
-## Thank You
-
-This project wouldn't be possible without help from the community, so I'd like to highlight some of its biggest contributors. Thank you all for your hard work, you've made my life a lot easier and taught me a lot in the process.
-
-* [Justin Greenberg](https://github.com/justingreenberg) - For all of your PR's, getting us to Babel 6, and constant work improving our patterns.
-* [Roman Pearah](https://github.com/neverfox) - For your bug reports, help in triaging issues, and PR contributions.
-* [Spencer Dixon](https://github.com/SpencerCDixon) - For your creation of [redux-cli](https://github.com/SpencerCDixon/redux-cli).
-* [Jonas Matser](https://github.com/mtsr) - For your help in triaging issues and unending support in our Gitter channel.
-
-And to everyone else who has contributed, even if you are not listed here your work is appreciated.
+> You can learn more about me at my website [www.philearley.com](http://www.philearley.com) and more about my background. My future plans are to keep learning more technology, and helping companies, people, and individuals power open-source solutions which make like better for ALL of us! 
